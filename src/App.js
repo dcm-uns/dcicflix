@@ -11,7 +11,7 @@ function App() {
       <Nav />
       <Banner />
       <Row title="Trending Now" fetchUrl={requests.fetchTrending} />
-      <Row title="Trending Now" fetchUrl={requests.fetchComedyMovies} />
+      <Row title="Comedias" fetchUrl={requests.fetchComedyMovies} />
     </div>
   );
 }

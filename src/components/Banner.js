@@ -7,9 +7,11 @@ function Banner() {
 
   const [movie, setMovie] = useState([]);
 
+  // Obtener el listado de peliculas originales de Netflix
   useEffect(() => {
     async function fetchData() {
       const request = await axios.get(requests.fetchNetflixOriginals);
+      // De esa lista, elegimos uno al azar (setMovie)
       setMovie(
         request.data.results[
           Math.floor(Math.random() * request.data.results.length - 1)
@@ -20,9 +22,11 @@ function Banner() {
     fetchData();
   }, []);
 
+  // Corte de texto
   function truncate(str, n) {
     return str?.length > n ? str.substr(0, n - 1) + "..." : str;
   }
+
 
   return (
     <header
