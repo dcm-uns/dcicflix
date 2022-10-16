@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
       <Nav />
-      <Banner />
+      {/*<Banner />*/}
       <TopMovie />
       <Row title="Trending Now" fetchUrl={requests.fetchTrending} />
       <Row title="Comedias" fetchUrl={requests.fetchComedyMovies} />
