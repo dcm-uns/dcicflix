@@ -9,5 +9,6 @@ const requests = {
   fetchHorrorMovies: `/discover/movie?api_key=${API_KEY}&with_genres=27`,
   fetchRomanceMovies: `/discover/movie?api_key=${API_KEY}&with_genres=10749`,
   fetchDocumentaries: `/discover/movie?api_key=${API_KEY}&with_genres=99`,
+  miTopMovie: `https://www.omdbapi.com/?apikey=91d05c89&t=Top%20Gun`
 };
 export default requests;
