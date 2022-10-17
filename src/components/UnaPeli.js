@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "../axios";
 import "./Banner.css";
 
+
 function UnaPeli({fetchUrl, idioma}) {
 
     const [movie, setMovie] = useState([]);
@@ -48,3 +49,19 @@ function UnaPeli({fetchUrl, idioma}) {
 }
 
 export default UnaPeli;
+
+
+
+
+/* 
+// Esta es una consulta que puede hacerse
+// en caso de que CORS traiga problemas.
+
+const test = await axios.get("https://cors-anywhere.herokuapp.com/{URL completa}",{
+  headers: {
+    "ngrok-skip-browser-warning": "1",
+    "access-control-allow-origin": "*",
+  }
+});
+
+ */
