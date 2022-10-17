@@ -38,6 +38,9 @@ function UnaPeli({fetchUrl, idioma}) {
         <h1 className="banner__description">
           {movie.Plot}
         </h1>
+        <h1 className="banner__precio">
+          123 bitcoins
+        </h1>
       </div>
       <div className="banner__fadeBottom"></div>
     </header>

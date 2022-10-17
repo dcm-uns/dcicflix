@@ -52,3 +52,18 @@
     );
   }
   
+  .banner__precio{
+    cursor: pointer;
+    color: rgb(167, 161, 0);
+    outline: none;
+    border: none;
+    font-weight: 500;
+    border-radius: 0.2vw;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-right: 1rem;
+    padding-top: 0.5rem;
+    background-color: rgba(51, 51, 51, 0.5);
+    padding-bottom: 0.5rem;
+    width:20%;
+  }
