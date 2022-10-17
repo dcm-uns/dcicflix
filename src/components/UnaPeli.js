@@ -9,6 +9,8 @@ function UnaPeli({fetchUrl, idioma}) {
   // Obtener una Pelicula de la URL indicada
   useEffect(() => {
     async function fetchData() {
+      // Pedido pretendido, configurado con el idioma
+      //    const request = await axios.get(fetchUrl + "/" + idioma);
       const request = await axios.get(fetchUrl);
       setMovie(request.data);
       return request;
@@ -18,7 +20,8 @@ function UnaPeli({fetchUrl, idioma}) {
 
 
   // Mostramos la información. Los campos de movie dependerán del JSON obtenido.
-  // Mostramos Title y Plot
+  // Mostramos Title y Plot, porque usamos OMDB
+
   return (
     <header
       className="banner"

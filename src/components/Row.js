@@ -26,7 +26,10 @@ function Row({ title, fetchUrl, isLargeRow }) {
       autoplay: 1,
     },
   };
+
   const handleClick = async (movie, isLargeRow) => {
+    // Aqui debería registrarse el historial, con movie.id
+    // Por ejemplo: axios.get("http://localhost:3001/historial/nuevo/"+movie.id);
     if (trailerUrl) {
       setTrailerUrl("");
     } else if (!isLargeRow) {
@@ -38,7 +41,7 @@ function Row({ title, fetchUrl, isLargeRow }) {
     }
   };
 
-  // Datos a mostrar:
+  // Datos a mostrar (TMDB):
   // movie
   //    id
   //    name
