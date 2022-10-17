@@ -1,26 +1,24 @@
 import React, { useState, useEffect } from "react";
 import axios from "../axios";
-import requests from "../requests";
 import "./Banner.css";
 
-function TopMovie() {
+function UnaPeli({fetchUrl, idioma}) {
 
-  const [movie, setMovie] = useState([]);
-
-  // Obtener el listado de peliculas originales de Netflix
+    const [movie, setMovie] = useState([]);
+    
+  // Obtener una Pelicula de la URL indicada
   useEffect(() => {
     async function fetchData() {
-      const request = await axios.get(requests.miTopMovie);
-      console.log(request.data);
-      setMovie(
-        request.data
-      );
+      const request = await axios.get(fetchUrl);
+      setMovie(request.data);
       return request;
     }
     fetchData();
-  }, []);
+  }, [fetchUrl,idioma]);
 
 
+  // Mostramos la información. Los campos de movie dependerán del JSON obtenido.
+  // Mostramos Title y Plot
   return (
     <header
       className="banner"
@@ -43,4 +41,4 @@ function TopMovie() {
   );
 }
 
-export default TopMovie;
+export default UnaPeli;
