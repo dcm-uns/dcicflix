@@ -1,3 +1,6 @@
+// UnaPeli es un clone de Banner.js 
+// que muestra una sola pelicula definida por fetchURL, con precio.
+
 import React, { useState, useEffect } from "react";
 import axios from "../axios";
 import "./Banner.css";
@@ -10,10 +13,11 @@ function UnaPeli({fetchUrl, idioma}) {
   // Obtener una Pelicula de la URL indicada
   useEffect(() => {
     async function fetchData() {
-      // Pedido pretendido, configurado con el idioma
-      //    const request = await axios.get(fetchUrl + "/" + idioma);
+      // En el microservicio queremos configurar el idioma
+      //    const request = await axios.get(fetchUrl + "&lang=" + idioma);
+      // pero por ahora usamos la URL configurada en requests
       const request = await axios.get(fetchUrl);
-      setMovie(request.data);
+      setMovie(request.data.movie_results[0]);
       return request;
     }
     fetchData();
@@ -21,26 +25,24 @@ function UnaPeli({fetchUrl, idioma}) {
 
 
   // Mostramos la información. Los campos de movie dependerán del JSON obtenido.
-  // Mostramos Title y Plot, porque usamos OMDB
-
   return (
     <header
       className="banner"
       style={{
         backgroundSize: "cover",
-        backgroundImage: `url(${movie.Poster})`,
+        backgroundImage: `url(https://image.tmdb.org/t/p/original/${movie?.backdrop_path})`,
         backgroundPosition: "center center",
       }}
     >
       <div className="banner__contents">
         <h1 className="banner__title">
-          {movie.Title}
+          {movie.original_title}
         </h1>
         <h1 className="banner__description">
-          {movie.Plot}
+          {movie.overview}
         </h1>
         <h1 className="banner__precio">
-          123 bitcoins
+          {movie.precio} bitcoins
         </h1>
       </div>
       <div className="banner__fadeBottom"></div>

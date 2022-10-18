@@ -10,7 +10,7 @@ function Banner() {
   // Obtener el listado de peliculas originales de Netflix
   useEffect(() => {
     async function fetchData() {
-      const request = await axios.get(requests.fetchNetflixOriginals);
+      const request = await axios.get(requests.fetchTrending);
       // De esa lista, elegimos uno al azar (setMovie)
       setMovie(
         request.data.results[
