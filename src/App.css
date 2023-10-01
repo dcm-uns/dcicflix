@@ -1,0 +1,11 @@
+* {
+  margin: 0;
+}
+
+.App {
+  background-color: rgb(28, 28, 28);
+  top:0px;
+  right:0px;
+  bottom:0px;
+  left:0px;
+}
