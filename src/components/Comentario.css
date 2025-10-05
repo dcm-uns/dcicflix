@@ -1,0 +1,7 @@
+.comentario{
+    color: rgb(196, 196, 196);
+    background-color: rgb(55, 57, 57);
+    border-top: 0.2em rgb(178, 91, 91) solid;
+    border-bottom: 0.2em rgb(173, 107, 107) solid;
+    padding: 1em;
+}
