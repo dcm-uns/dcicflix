@@ -1,3 +1,5 @@
+// DATOS
+//    un texto de comentario
 
 import { useState, useEffect } from "react";
 import "./Comentario.css";
